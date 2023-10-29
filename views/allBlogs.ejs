@@ -1,0 +1,33 @@
+<%- include("./partials/header") %>
+<%- include("./partials/home-navbar") %>
+
+<div class="container mt-5">
+    <h3>All Blogs 😇</h3>
+
+    <% blogs.reverse() %>
+
+    <% blogs.forEach(blog => { %>
+      <div class="list">
+        <div class="card mt-3">
+          <div class="card-body">
+            <p class="text-muted">Published at: <%= blog.posted_at %></p>
+            <p class="text-muted">By: <%= blog.writer %></p>
+            <h5 class="card-title"><%= blog.title %></h5>
+            <p class="card-text"><%= blog.content.slice(0, 99) %>... <a href="/blog/more/<%= blog._id %>">Read More</a></p>
+            <a href="/blog/more/<%= blog._id %>" class="btn btn-sm btn-primary">Read More...</a>
+          </div>
+        </div>
+      </div>
+    <%}) %>
+    
+</div>
+
+<div>
+  <ul class="listPage">
+  
+  </ul>
+</div>
+
+<script src="index.js"></script>
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+body {
+  background: linear-gradient(45deg, #c2abca, #4700bc);
+}
+
+.container1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -250px;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #383838;
+  padding: 2px 40px;
+  border-radius: 6px;
+}
+.ul {
+  margin: 20px 30px;
+  padding: 0;
+}
+.link {
+  display: inline-block;
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 30px;
+  cursor: pointer;
+}
+.link.active {
+  color: #fff;
+  background-image: linear-gradient(#ff4568, #ff4568);
+  background-repeat: no-repeat;
+}
+.btn1,
+.btn2 {
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #383838;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.welcome-container {
+  width: 400px;
+  margin: 0 auto;
+}
+.allblogs a{
+  color: #383838;
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 2px;
+  margin-left: 90px;
+}
+.listPage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    margin-bottom: auto;
+}
+.listPage li{
+    background-color: #ffffffBD;
+    padding: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.listPage .active{
+    background-color: #B192EF;
+    color: #fff;
+}

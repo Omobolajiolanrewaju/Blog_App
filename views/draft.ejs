@@ -1,0 +1,45 @@
+<%- include("./partials/header") %> <%- include("./partials/navbar") %>
+
+<div class="container mt-5">
+  <h3>Your Drafts😇</h3>
+
+  <% blogs.reverse() %> <% blogs.forEach(blog => { %>
+  <div class="list">
+    <div class="card mt-3">
+      <div class="card-body">
+        <p class="text-muted">Published at: <%= blog.posted_at %></p>
+        <h5 class="card-title"><%= blog.title %></h5>
+        <p class="card-text">
+          <%= blog.content.slice(0, 99) %>...
+          <a href="/blog/<%= blog._id %>">Read More</a>
+        </p>
+        <a href="/blog/<%= blog._id %>" class="btn btn-sm btn-primary"
+          >Read More...</a
+        >
+        <a href="/edit/<%= blog._id %>" class="btn btn-sm btn-warning mx-1"
+          >Edit</a
+        >
+        <a href="/delete/<%= blog._id %>" class="btn btn-sm btn-danger mx-1"
+          >Delete</a
+        >
+        <a href="/publish/<%= blog._id %>" class="btn btn-sm btn-secondary mx-1"
+          >Publish</a>
+      </div>
+    </div>
+  </div>
+  <%}) %>
+
+  <a href="/blog" class="btn btn-sm my-5" style="background-color: antiquewhite"
+    >View Your Published Blogs</a
+  >
+</div>
+
+<div>
+  <ul class="listPage">
+  
+  </ul>
+</div>
+
+<script src="index.js"></script>
+
+<%- include("./partials/footer") %>
