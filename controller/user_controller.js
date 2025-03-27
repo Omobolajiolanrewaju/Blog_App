@@ -2,7 +2,7 @@ const {UserModel, validate} = require('../models/user.model');
 const logger = require('../logger');
 const bcrypt = require('bcrypt');
 const Joi = require('joi');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 const signUpHandler = async (req, res) => {
     try {
